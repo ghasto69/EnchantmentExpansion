@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "ghasto.enchantment_expansion.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractArrowMixin",
+    "BowItemMixin",
+    "BundleContentsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
