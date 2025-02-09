@@ -225,20 +225,6 @@ public class ModEnchantments {
             ))
     );
 
-    /* Misc */
-    //Capacity: Bundles can store more items
-    public static final ResourceKey<Enchantment> CAPACITY = register("capacity", context -> Enchantment.enchantment(
-            Enchantment.definition(
-                    context.lookup(Registries.ITEM).getOrThrow(ItemTags.BUNDLES),
-                    3,
-                    3,
-                    Enchantment.dynamicCost(1, 10),
-                    Enchantment.dynamicCost(1, 15),
-                    4,
-                    EquipmentSlotGroup.ANY
-            ))
-    );
-
     public static void registerEnchantmentEvents() {
         //Retribution
         AttackEntityCallback.EVENT.register((attacker, level, hand, entity, hitResult) -> {
