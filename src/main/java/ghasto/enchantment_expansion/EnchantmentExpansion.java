@@ -30,9 +30,6 @@ public class EnchantmentExpansion implements ModInitializer {
 		ModEnchantments.registerEnchantmentEvents();
 		ModEnchantments.registerEnchantments();
 		ModCurses.registerCurses();
-		DefaultItemComponentEvents.MODIFY.register(context -> {
-			context.modify(Items.BUNDLE, builder -> builder.set(DataComponents.BUNDLE_CONTENTS, ((BundleContentsCapacityMultiplier) (Object) new BundleContents(List.of())).enchantmentExpansion$setCapacityMultiplier(2)));
-		});
 	}
 
 	public static ResourceLocation asResource(String path) {

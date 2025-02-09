@@ -23,9 +23,8 @@ public class ModEnchantmentTags extends FabricTagProvider<Enchantment> {
 
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup) {
-//        getOrCreateTagBuilder(FIRE_ASPECT_EXCLUSIVE)
-//                .add(Enchantments.FIRE_ASPECT)
-//                .add(ModEnchantments.FROSTBITE.getKey());
+        getOrCreateTagBuilder(FIRE_ASPECT_EXCLUSIVE)
+                .add(Enchantments.FIRE_ASPECT);
     }
 
     private static TagKey<Enchantment> key(String path) {

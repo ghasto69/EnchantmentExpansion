@@ -4,8 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AbstractArrowMixin",
-    "BowItemMixin",
-    "BundleContentsMixin"
+    "BowItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

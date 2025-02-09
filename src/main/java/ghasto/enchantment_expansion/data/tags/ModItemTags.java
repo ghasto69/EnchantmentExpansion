@@ -19,16 +19,12 @@ public class ModItemTags extends FabricTagProvider<Item> {
     }
 
     public static final TagKey<Item> NETHERITE_FOOT_ARMOR_ENCHANTABLE = key("netherite_foot_armor_enchantable");
-    public static final TagKey<Item> BUNDLES = key("bundles");
     public static final TagKey<Item> BREAKING_CURSE = key("breaking_curse");
 
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup) {
         getOrCreateTagBuilder(NETHERITE_FOOT_ARMOR_ENCHANTABLE)
                 .add(Items.NETHERITE_BOOTS);
-
-        getOrCreateTagBuilder(BUNDLES)
-                .add(Items.BUNDLE);
     }
 
     private static TagKey<Item> key(String path) {

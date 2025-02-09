@@ -229,7 +229,7 @@ public class ModEnchantments {
     //Capacity: Bundles can store more items
     public static final ResourceKey<Enchantment> CAPACITY = register("capacity", context -> Enchantment.enchantment(
             Enchantment.definition(
-                    context.lookup(Registries.ITEM).getOrThrow(ModItemTags.BUNDLES),
+                    context.lookup(Registries.ITEM).getOrThrow(ItemTags.BUNDLES),
                     3,
                     3,
                     Enchantment.dynamicCost(1, 10),
@@ -279,9 +279,8 @@ public class ModEnchantments {
     }
 
     protected static ResourceKey<Enchantment> register(String name, Function<DynamicRegistryContext, Enchantment.Builder> factory) {
-        ResourceLocation location = EnchantmentExpansion.asResource(name);
-        ResourceKey<Enchantment> key = ResourceKey.create(Registries.ENCHANTMENT, location);
-        FroglightDynamicRegistry.register(Registries.ENCHANTMENT, key, context -> factory.apply(context).build(location));
+        ResourceKey<Enchantment> key = ResourceKey.create(Registries.ENCHANTMENT, EnchantmentExpansion.asResource(name));
+        FroglightDynamicRegistry.register(Registries.ENCHANTMENT, key, context -> factory.apply(context).build(context.location()));
         return key;
     }
 
