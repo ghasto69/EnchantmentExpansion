@@ -1,7 +1,6 @@
 package ghasto.enchantment_expansion.data;
 
 import ghasto.enchantment_expansion.EnchantmentExpansion;
-import ghasto.enchantment_expansion.registry.ModEnchantments;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
@@ -10,7 +9,7 @@ import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
 public class EnglishLangProvider extends FabricLanguageProvider {
-    protected EnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+    public EnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 

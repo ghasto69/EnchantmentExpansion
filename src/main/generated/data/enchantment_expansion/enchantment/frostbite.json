@@ -1,0 +1,42 @@
+{
+  "anvil_cost": 5,
+  "description": {
+    "translate": "enchantment.enchantment_expansion.frostbite"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "effect": {
+          "type": "enchantment_expansion:inflict_mob_effect",
+          "effects": [
+            "minecraft:weakness",
+            "minecraft:slowness",
+            "minecraft:mining_fatigue"
+          ],
+          "value": {
+            "type": "minecraft:linear",
+            "base": 7.0,
+            "per_level_above_first": 7.0
+          }
+        },
+        "enchanted": "attacker"
+      }
+    ]
+  },
+  "exclusive_set": "#enchantment_expansion:fire_aspect_exclusive",
+  "max_cost": {
+    "base": 1,
+    "per_level_above_first": 15
+  },
+  "max_level": 2,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "slots": [
+    "hand"
+  ],
+  "supported_items": "#minecraft:enchantable/fire_aspect",
+  "weight": 10
+}

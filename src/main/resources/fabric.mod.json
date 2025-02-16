@@ -19,7 +19,7 @@
 			"ghasto.enchantment_expansion.EnchantmentExpansion"
 		],
 		"fabric-datagen": [
-          "ghasto.enchantment_expansion.data.EnchantmentExpansionDataGenerator"
+          "ghasto.enchantment_expansion.EnchantmentExpansion"
 		]
 	},
 	"mixins": [
